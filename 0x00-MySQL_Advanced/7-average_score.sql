@@ -2,7 +2,7 @@
 DELIMITER $$
 CREATE PROCEDURE ComputeAverageScoreForUser (user_id INT)
 BEGIN
-    DECLARE avg_score INT DEFAULT 0;
+    DECLARE avg_score FLOAT;
 
     SELECT AVG(score) INTO avg_score
     FROM corrections
