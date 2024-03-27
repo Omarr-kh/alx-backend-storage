@@ -1,0 +1,2 @@
+// show documents that matches a name
+db.school.find({"name": "Holberton school"})
