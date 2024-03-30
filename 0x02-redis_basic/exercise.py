@@ -28,9 +28,9 @@ def call_history(method: Callable) -> Callable:
     def invoker(self, *args, **kwargs) -> Any:
         """ Returns method's output after storing """
 
-        self.rpush(input_keys, str(args))
+        self._redis.rpush(input_keys, str(args))
         outs = method(self, *args, **kwargs)
-        self.rpush(output_keys, outs)
+        self._redis.rpush(output_keys, outs)
 
         return outs
     return invoker
