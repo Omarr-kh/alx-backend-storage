@@ -62,7 +62,7 @@ def replay(method: Callable) -> None:
     print(history_str, end='')
 
 
-class Cashe:
+class Cache:
     """ Redis Data Storage """
 
     def __init__(self) -> None:
