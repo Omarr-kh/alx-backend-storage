@@ -73,7 +73,7 @@ class Cashe:
     @call_history
     @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
-        """ Create a key, store data in Redis using the 
+        """ Create a key, store data in Redis using the
         random key and return the key
         """
 
